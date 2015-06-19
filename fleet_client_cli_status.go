@@ -68,7 +68,7 @@ func (this *ClientCLI) JournalF(name string) (outc, errc chan string, err error)
 	var stdout, stderr io.ReadCloser
 
 	cmdY := exec.Command("echo", "y")
-	cmd := exec.Command(FLEETCTL, ENDPOINT_OPTION, this.etcdPeer, "journal", "-f", name)
+	cmd := exec.Command(FLEETCTL, ENDPOINT_OPTION, this.etcdPeer, "journal", "-lines=200", name)
 
 	cmd.Stdin, _ = cmdY.StdoutPipe()
 	stdout, err = cmd.StdoutPipe()
