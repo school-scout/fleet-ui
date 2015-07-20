@@ -1,7 +1,6 @@
 Godeps
 angular/.tmp
 angular/.sass-cache
-angular/app
 angular/bower_components
 angular/node_modules
-angular/test
+Dockerfile
