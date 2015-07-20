@@ -45,7 +45,7 @@ RUN go get && go install
 RUN cp $GOPATH/bin/fleet-ui $APPDIR/fleet-ui
 
 # add fleet
-ENV FLEET_VERSION 0.9.2
+ENV FLEET_VERSION 0.10.2
 RUN curl -s -L https://github.com/coreos/fleet/releases/download/v${FLEET_VERSION}/fleet-v${FLEET_VERSION}-linux-amd64.tar.gz \
   | tar xz fleet-v${FLEET_VERSION}-linux-amd64/fleetctl -O > /usr/local/bin/fleetctl \
  && chmod +x /usr/local/bin/fleetctl
